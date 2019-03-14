@@ -1,0 +1,39 @@
+$shale-gray: #3D454C;
+$ghostly-white: #F6F6FF;
+$dark-gray-blue: #29333A;
+$color-manatee: #9999A6;
+$amethyst-gradient: linear-gradient(to right, #A45EDA 0%, #AE84CF 100%);
+$amethyst-gradient-active: linear-gradient(to right, #8542BA 0%, #9865C1 100%);
+// $white: #FFFFFF;
+$color-marengo: #596069;
+$shale-gray-gradient-to-bottom: linear-gradient(to bottom, #3D454C 0%, rgba(61, 69, 76, 0) 100%);
+$shale-gray-gradient-to-right: linear-gradient(to right, #3D454C 0%, rgba(61, 69, 76, 0) 100%);
+// $color-coral: #FF3F3B;
+$red-orange: #FF584C; // цвет текста при ошибке
+$red-orange-gradient: linear-gradient(to right, #FF584C 0%, #FF3F3B 100%); // для обводки input при ошибке (не получается подключить! проверить!)
+$dark-red:#BA2724;
+$color-amethyst: #AE84CF;
+
+$orange-yellow: #F58345; // переделать на градиент
+$orange-yellow-gradient: linear-gradient(to right, #F58345 0%, #FF584C 100%); // для диаграммы
+$green: #94D362; // переделать на градиент
+$green-gradient: linear-gradient(to right, #94D362 0%, #27AE60 100%); // для диаграммы
+$yellowish: #FFBB2A; // переделать на градиент
+$yellowish-green-gradient: linear-gradient(to right, #94D362 0%, #FFBB2A 100%); // для диаграммы
+$yellowish-green:#94D362;// переделать на градиент
+
+//hover для задач
+$slate-gray: #666E77;
+
+//контроллы
+$deep-yellow-pink: #F9574B;
+$diamond-orange-yellow: #FFB72A;
+$emerald: #59D366;
+
+//контроллы при наведении
+$redhead: #D68629;
+$transport-red: #C2110E;
+$green-herbal: #169B4E;
+
+//обводка у контроллов при нажатии
+$cadet-blue-krajola: rgba(181, 181,	192, .2);

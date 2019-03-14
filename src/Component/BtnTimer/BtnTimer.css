@@ -1,0 +1,23 @@
+.exercise__time{
+  position: relative;
+}
+
+.exercise__time:hover .popup{
+  opacity: 1;
+}
+
+.exercise__time.disabled:hover .popup{
+  opacity: 0;
+}
+
+.popup{
+  transition: opacity .4s;
+  opacity: 0;
+  position: absolute;
+  top: -25px;
+  left: 15px;
+  background-color: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+  color: #000;
+}

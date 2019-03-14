@@ -1,0 +1,16 @@
+.exercise__button{
+  .icon-load{
+    animation: rotate 2s linear infinite;
+    width: 18px;
+  }
+
+  @keyframes rotate {
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.exercise__form, .exercise__comment{
+  overflow: hidden;
+}

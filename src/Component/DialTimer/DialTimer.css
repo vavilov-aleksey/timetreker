@@ -1,0 +1,111 @@
+.circular-chart {
+  display: block;
+  max-width: 190px;
+  max-height: 190px; }
+
+.circle-bg {
+  fill: none;
+  stroke: #29333A;
+  stroke-width: 1.8; }
+
+.circle {
+  fill: none;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards; }
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100; } }
+.percentage {
+  fill: #aaa;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle; }
+
+.diagram {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative; }
+  .diagram img {
+    position: absolute;
+    width: 180px;
+    height: 180px; }
+  .diagram_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  .diagram__date {
+    display: flex;
+    align-items: center; }
+    .diagram__date .icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 7px; }
+  .diagram__interval {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #9999A6; }
+  .diagram__time {
+    font-size: 32px;
+    line-height: 45px;
+    font-weight: 700;
+    color: #F6F6FF; }
+  .diagram__percentages {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 900;
+    color: #9999A6;
+    margin-top: 27px;
+    text-align: center; }
+  .diagram__circle {
+    position: absolute; }
+
+.stroke-green {
+  stroke: #94D362;
+  fill: none;
+  stroke-width: 8;
+  stroke-dashoffset: 3077;
+  stroke-linecap: round; }
+
+.stroke-red {
+  stroke: #F58345;
+  fill: none;
+  stroke-dasharray: 912;
+  stroke-width: 8;
+  stroke-dashoffset: 3082;
+  stroke-linecap: round; }
+
+@keyframes rotate {
+  to {
+    stroke-dashoffset: 0; } }
+.diagram-wrapper {
+  position: relative;
+  top: 30px; }
+
+@media (max-width: 991px) {
+  .diagram-wrapper {
+    top: 0; }
+
+  .diagram__interval {
+    font-size: 16px;
+    line-height: 20px; } }
+@media (max-width: 767px) {
+  .diagram__percentages {
+    margin-top: 20px;
+    margin-bottom: 70px; } }
+
+/*# sourceMappingURL=DialTimer.css.map */

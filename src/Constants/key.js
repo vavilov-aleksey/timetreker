@@ -1,0 +1,1 @@
+export const apiKey = localStorage.getItem('authorization') === null ? false : {'Authorization': localStorage.getItem('authorization')};

@@ -1,0 +1,333 @@
+@charset "utf-8";
+@import "../../Style/colors";
+
+// header styles
+.header {
+  background-color: $dark-gray-blue;
+  height: 58px;
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-around;
+
+  a, p, span {
+    font-family: 'Lato', sans-serif; // Общие стили для ссылок и aбзацев в блоке header
+    color: $ghostly-white; // Общие стили для ссылок и aбзацев в блоке header
+  }
+
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+  }
+
+  // header-logo
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+
+    img {
+      width: 37px;
+      height: 37px;
+      margin-right: 10px;
+    }
+
+    span {
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 900;
+    }
+  }
+
+  // header-nav
+  .nav {
+    margin-right: 15vw;
+    display: flex;
+  }
+
+  &__menu {
+    display: flex;
+
+    li {
+      display: flex;
+      align-items: baseline;
+      justify-content: baseline;
+
+      &:first-child {
+        margin-right: 5px;
+
+        .icon {
+          position: relative;
+          top: 1px;
+        }
+      }
+
+      .icon {
+        width: 16px;
+        height: 15px;
+        margin-right: 15px;
+      }
+
+      a {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        padding: 19px 20px 16px;
+        height: 100%;
+
+        &:hover,
+        &:active,
+        &:focus {
+          background: linear-gradient(to bottom, rgba(61, 69, 76, 0.5) 0%, rgba(61, 69, 76, 0.5) 100%);
+        }
+
+        span {
+          color: $color-manatee;
+        }
+      }
+
+      .active {
+        background: $shale-gray-gradient-to-bottom;
+        border-bottom: 3px solid $color-amethyst;
+      }
+    }
+
+    span {
+      // color: $color-manatee;
+    }
+  }
+
+  .nav__rightNav {
+    display: flex;
+    align-items: center;
+  }
+
+  // header-profile
+  &__profile {
+    display: flex;
+    align-items: center;
+    margin-right: 45px;
+
+    img {
+      height: 37px;
+      width: 37px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+    }
+  }
+
+  // header-link-exit
+  &__link-exit {
+    width: 60px;
+    height: 34px;
+    border: 1px solid $color-marengo;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $color-manatee;
+    }
+
+    .icon {
+      width: 17px;
+      height: 15px;
+    }
+  }
+
+  //hamburger
+  .hamburger {
+    width: 40px;
+    height: 30px;
+    position: fixed;
+    cursor: pointer;
+    display: none;
+    left: 10px;
+    top: 12px;
+    transition-delay: 10s;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      background: $color-manatee;
+      position: absolute;
+      height: 2px;
+      top: 8px;
+      left: 9px;
+      // transition: transform .01s;
+      // transition-delay: 0.1s;
+    }
+
+    &:before {
+      width: 21px;
+    }
+
+    &:after {
+      top: 20px;
+      width: 14px;
+    }
+
+    span {
+      height: 2px;
+      width: 21px;
+      display: block;
+      background: $color-manatee;
+      position: absolute;
+      top: 50%;
+      margin-top: -1px;
+      left: 9px;
+      opacity: 1;
+      transition: opacity .2s;
+    }
+
+    &.active {
+      left: inherit;
+      right: 65px;
+      top: 12px;
+
+      &:before {
+        transform: rotate(45deg);
+        top: 13px;
+        width: 20px;
+        background: $color-marengo;
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+        top: 13px;
+        width: 20px;
+        background: $color-marengo;
+      }
+
+      span {
+        opacity: 0;
+        background: $color-marengo;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+
+  .header {
+    background-color: transparent;
+    z-index: 1;
+    position: fixed;
+
+    .nav-bar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 0;
+      background-color: $dark-gray-blue;
+      overflow: hidden;
+      transition: width .2s;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: 100%;
+
+      &.active {
+        width: calc(100% - 61px);
+        height: 100%;
+      }
+    }
+
+    &__logo {
+      margin-right: 0;
+      margin-top: 30px;
+      margin-left: 30px;
+      max-width: 180px;
+
+      span {
+        font-size: 20px;
+        line-height: 23px;
+      }
+    }
+
+    .nav {
+      margin-right: 0;
+      flex-direction: column;
+      min-width: 250px;
+      height: 100%;
+      width: 100%;
+    }
+
+    &__menu {
+      flex-direction: column;
+      margin-top: 20px;
+
+      li {
+
+        a {
+          width: 100%;
+          font-size: 18px;
+          line-height: 24px;
+          padding: 19px 20px 16px 40px;
+        }
+
+        .active {
+          background: $shale-gray-gradient-to-right;
+          border-bottom: none;
+          border-left: 3px solid $color-amethyst;
+        }
+
+        &:first-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .nav__rightNav {
+      flex-direction: column;
+      max-width: 177px;
+      margin: 0 auto;
+      align-items: flex-start;
+      padding-bottom: 40px;
+    }
+
+    &__profile {
+      margin-right: 0;
+
+      p {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      img {
+        display: none;
+      }
+    }
+
+    &__link-exit {
+      height: 58px;
+      width: 177px;
+      margin-top: 25px;
+
+      .icon {
+        display: none;
+      }
+
+      &:before {
+        content: "Выйти";
+      }
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,4BAAU;EACR,SAAS,EAAE,yBAAyB;EACpC,KAAK,EAAE,IAAI;AAGb,iBAIC;EAHC,IAAI;IACF,SAAS,EAAE,cAAc;AAK/B,mCAAmC;EACjC,QAAQ,EAAE,MAAM",
+"sources": ["TaskList.scss"],
+"names": [],
+"file": "TaskList.css"
+}

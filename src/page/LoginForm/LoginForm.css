@@ -1,0 +1,107 @@
+.authorization {
+  padding: 50px 0;
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  background-image: url(../../images/content/background-authorization.png);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.authorization-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px; }
+  .authorization-title img {
+    margin-right: 15px;
+    width: 33px;
+    height: 33px; }
+  .authorization-title h1 {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    color: #F6F6FF; }
+
+.authorization-form {
+  max-width: 360px;
+  margin: auto; }
+  .authorization-form input {
+    width: 100%;
+    background-color: #29333A;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    color: #F6F6FF;
+    padding-left: 20px;
+    height: 44px;
+    margin-bottom: 18px; }
+    .authorization-form input::placeholder {
+      color: #9999A6;
+      font-size: 14px; }
+  .authorization-form__forgot {
+    position: relative; }
+    .authorization-form__forgot a {
+      font-size: 14px;
+      line-height: 18px;
+      color: #596069;
+      font-weight: 400;
+      position: absolute;
+      right: 19px;
+      top: 16px; }
+  .authorization-form p {
+    display: none; }
+  .authorization-form__button {
+    width: 100%;
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: 700;
+    height: 44px;
+    margin: 0 auto;
+    display: block; }
+    .authorization-form__button .icon {
+      width: 6px;
+      height: 8px;
+      margin-left: 5px; }
+
+.error input {
+  border: 1px solid #FF584C; }
+.error p {
+  display: block;
+  color: #FF584C;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 18px; }
+
+@media (max-width: 992px) {
+  .authorization {
+    padding-top: 100px; } }
+@media (max-width: 575px) {
+  .authorization {
+    background-image: url(../../images/content/background-authorization-mobile.png); }
+
+  .authorization-title {
+    flex-direction: column;
+    align-items: center; }
+    .authorization-title img {
+      margin-right: 0;
+      margin-bottom: 10px; }
+
+  .authorization-form__button {
+    font-size: 16px;
+    line-height: 23px; }
+  .authorization-form__forgot a {
+    font-size: 16px;
+    line-height: 25px;
+    top: 11px; }
+
+  .error p {
+    padding: 0 51px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px; } }
+
+/*# sourceMappingURL=LoginForm.css.map */

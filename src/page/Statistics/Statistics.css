@@ -1,0 +1,16 @@
+.statistics {
+  padding: 50px 0;
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  background-image: url(../../images/content/background-statistics.png);
+  background-repeat: no-repeat;
+  background-size: 85%;
+  background-position: center; }
+
+@media (max-width: 1199px) {
+  .statistics {
+    background-image: none;
+    padding: 108px 0 50px; } }
+
+/*# sourceMappingURL=Statistics.css.map */
